@@ -22,6 +22,4 @@ massive(connectionString)
         return db;
     }
 
-    module.exports = {
-        getDb,
-    };
+    module.exports = getDb;

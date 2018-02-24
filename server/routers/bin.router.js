@@ -1,7 +1,7 @@
 const express = require('express');
 const getDb = require('../database/bootstrap.database');
 
-const binRouter = express.Router();
+const binsRouter = express.Router();
 
 binRouter.get('/find', (req, res) => {
     const db = getDb();
@@ -10,6 +10,4 @@ binRouter.get('/find', (req, res) => {
         .catch( err => res.send(err))
 });
 
-module.exports = (
-    binRouter
-);
+module.exports = binsRouter;
