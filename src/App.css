@@ -1,28 +1,104 @@
-.App {
-  text-align: center;
+:root {
+  --darkRed: #AB2A19;
+  --red: #D34735;
+  --lightRed: #ED6B5A;
+  --pink: #FFB8AF;
+  --grey: #D8D8D8;
+  --green: #40F99B;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+.body {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  width: 50vw;
+  margin-top: 50px;
+}
+
+.bin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 50px;
+  background-color: var(--red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  text-decoration: none;
+}
+
+.bin a:hover {
+  background-color: var(--lightRed);
+}
+
+.bin a:active {
+  border: var(--darkRed) solid 4px;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 50px;
+  background-color: var(--pink);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  outline: none;
+  text-decoration: none;
+}
+
+.shelf-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 60px;
+  background-color: var(--darkRed);
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.shelf-header a {
+  text-decoration: none;
+  color: white;
 }
 
-.App-intro {
-  font-size: large;
+.shelf-header img {
+  width: 40px;
+  height: auto;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.shelf-left {
+  width: 30vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shelf-right {
+  display: flex;
+  align-items: center;
+  width: 70vw;
+  height: 60px;
+  background-color: var(--red);
+  padding-left: 20px;
 }

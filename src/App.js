@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+
+import Home from './components/Home/Home';
+import ShelfA from './components/ShelfA/ShelfA';
+import ShelfB from './components/ShelfB/ShelfB';
+import ShelfC from './components/ShelfC/ShelfC';
+import ShelfD from './components/ShelfD/ShelfD';
+import ShelfAItem from './components/ShelfA/ShelfAItem';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Route exact path="/" component={Home}/>
+        <Route path="/shelfa" component={ShelfA}/>
+        <Route path="/shelfb" component={ShelfB}/>
+        <Route path="/shelfc" component={ShelfC}/>
+        <Route path="/shelfd" component={ShelfD}/>
+        <Route path="/create/A1" component={ShelfAItem} />
       </div>
     );
   }

@@ -1,0 +1,78 @@
+@import '../../App.css';
+
+.shelf-item-left {
+    width: 10vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shelf-item-center {
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    height: 60px;
+    background-color: var(--red);
+    padding-left: 20px;
+}
+
+.shelf-item-right {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    height: 60px;
+    background-color: var(--lightRed);
+    padding-left: 20px;
+}
+
+.name {
+    width: 20vw;
+    height: 40px;
+    font-size: 16pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-bottom: solid 1px;
+    outline: none;
+    border-bottom: solid 2px var(--grey);
+}
+
+.name:focus {
+    outline: none;
+    border-bottom: solid 2px var(--green);
+}
+
+.price {
+    width: 20vw;
+    height: 40px;
+    font-size: 16pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-bottom: solid 1px;
+    outline: none;
+    border-bottom: solid 2px var(--grey);
+}
+
+.price:focus {
+    outline: none;
+    border-bottom: solid 2px var(--green);
+}
+
+.add-to-inventory {
+    width: 15vw;
+    height: 35px;
+    background-color: var(--green);
+    outline: none;
+    border-radius: 3px;
+    border: none;
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.add-to-inventory:hover {
+    color: white;
+}
+
+.add-to-inventory:active {
+    background-color: var(--grey);
+}
