@@ -6,7 +6,7 @@ const binsRouter = express.Router();
 binsRouter.get('/find', (req, res) => {
     const db = getDb();
     db.get_bins()
-        .then( bins => req.setEncoding(bins))
+        .then( bins => req.send(bins))
         .catch( err => res.send(err))
 });
 
