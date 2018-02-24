@@ -1,16 +1,22 @@
-const masssive = require('massive');
+const massive = require('massive');
 const connectionString = 'postgres://zwhcauxd:Z5T0Nb_PzlpguDKV0UPk2nK30-OqCQDW@baasu.db.elephantsql.com:5432/zwhcauxd?ssl=true';
 let db;
 
 massive(connectionString)
-    .then( dbInstance => db = dbInstance)
+    .then( dbInstance => {
+        db = dbInstance;
+        messageString = 'Connection to the database was successful.';
+        return dbInstance.shelfie_init();
+    })
     .catch( err => {
-        throw new Error(`Massive connection unseccessful. ${err}`);
+        throw err;
     });
 
     function getDb() {
         if(!db) {
-            throw console.error('We have not connected to the database yet!');
+            messageString = 'We have not connected to the database yet!';
+            console.error(messageString);
+            return messageString;
         }
 
         return db;
