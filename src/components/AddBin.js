@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { formatPriceForDB } from '../utils/formatting.utils';
 import { postBin } from '../services/api.services';
 
 class AddBin extends Component {
@@ -29,6 +30,7 @@ class AddBin extends Component {
         const idArray = id.split('');
         const shelf = idArray[0];
         const { name, price } = this.state;
+        const formattedPrice = formatPriceForDB(price);
         const body = {
             name: name,
             price: formattedPrice,
