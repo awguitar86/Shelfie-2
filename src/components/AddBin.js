@@ -12,3 +12,5 @@ class AddBin extends Component {
 
     }
 }
+
+export default AddBin;

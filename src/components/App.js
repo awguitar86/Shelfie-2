@@ -10,7 +10,7 @@ import ShelfList from './ShelfList';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="App">
         <Route exact path='/' component={ShelfList}   />
         <Route path='/shelf/:id/' component={BinList} />
         <Route path='/create/:id' component={AddBin}  />
