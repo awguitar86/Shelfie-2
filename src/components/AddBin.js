@@ -10,7 +10,9 @@ class AddBin extends Component {
             name: '',
             price: '0',
         };
-
+        this.changeNameHandler = this.changeNameHandler.bind(this);
+        this.changePriceHandler = this.changePriceHandler.bind(this);
+        this.addBin = this.addBin.bind(this);
     }
 
     changeNameHandler(e) {
